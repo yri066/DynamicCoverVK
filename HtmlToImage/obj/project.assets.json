@@ -1,0 +1,543 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "GrapeCity.Documents.Common/4.0.0.616": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/GrapeCity.Documents.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GrapeCity.Documents.Common.dll": {}
+        },
+        "resource": {
+          "lib/netstandard2.0/ja/GrapeCity.Documents.Common.resources.dll": {
+            "locale": "ja"
+          }
+        }
+      },
+      "GrapeCity.Documents.Html/4.0.0.616": {
+        "type": "package",
+        "dependencies": {
+          "GrapeCity.Documents.Common": "[4.0.0.616]",
+          "GrapeCity.Documents.Imaging": "[4.0.0.616]",
+          "GrapeCity.Documents.Pdf": "[4.0.0.616]"
+        },
+        "compile": {
+          "lib/netstandard2.0/GrapeCity.Documents.Html.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GrapeCity.Documents.Html.dll": {}
+        },
+        "build": {
+          "build/GrapeCity.Documents.Html.targets": {}
+        }
+      },
+      "GrapeCity.Documents.Html.Linux.X64/4.0.0.616": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/GrapeCity.Documents.Html.Linux.X64.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GrapeCity.Documents.Html.Linux.X64.dll": {}
+        },
+        "build": {
+          "build/GrapeCity.Documents.Html.Linux.X64.targets": {}
+        }
+      },
+      "GrapeCity.Documents.Html.Mac.X64/4.0.0.616": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/GrapeCity.Documents.Html.Mac.X64.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GrapeCity.Documents.Html.Mac.X64.dll": {}
+        },
+        "build": {
+          "build/GrapeCity.Documents.Html.Mac.X64.targets": {}
+        }
+      },
+      "GrapeCity.Documents.Html.Windows.X64/4.0.0.616": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/GrapeCity.Documents.Html.Windows.X64.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GrapeCity.Documents.Html.Windows.X64.dll": {}
+        },
+        "build": {
+          "build/GrapeCity.Documents.Html.Windows.X64.targets": {}
+        }
+      },
+      "GrapeCity.Documents.Imaging/4.0.0.616": {
+        "type": "package",
+        "dependencies": {
+          "GrapeCity.Documents.Common": "[4.0.0.616]",
+          "System.Buffers": "4.4.0",
+          "System.Memory": "4.5.0",
+          "System.Numerics.Vectors": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/GrapeCity.Documents.Imaging.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GrapeCity.Documents.Imaging.dll": {}
+        },
+        "resource": {
+          "lib/netstandard2.0/ja/GrapeCity.Documents.Imaging.resources.dll": {
+            "locale": "ja"
+          }
+        }
+      },
+      "GrapeCity.Documents.Pdf/4.0.0.616": {
+        "type": "package",
+        "dependencies": {
+          "GrapeCity.Documents.Common": "[4.0.0.616]",
+          "GrapeCity.Documents.Imaging": "[4.0.0.616]",
+          "Portable.BouncyCastle": "1.8.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/GrapeCity.Documents.Pdf.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GrapeCity.Documents.Pdf.dll": {}
+        },
+        "resource": {
+          "lib/netstandard2.0/ja/GrapeCity.Documents.Pdf.resources.dll": {
+            "locale": "ja"
+          }
+        }
+      },
+      "Portable.BouncyCastle/1.8.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
+        }
+      },
+      "System.Buffers/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "System.Memory/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
+        }
+      },
+      "System.Numerics.Vectors/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GrapeCity.Documents.Common/4.0.0.616": {
+      "sha512": "slNgbFE1wCHta5vZudFuIlgwnyZAGVedtE+O5u39WNNnh8rK5PEcN/NXEl3nd1fbsB7B4ApDm/twq0sI84dywg==",
+      "type": "package",
+      "path": "grapecity.documents.common/4.0.0.616",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "3rd-party-software.txt",
+        "LICENSE.txt",
+        "grapecity.documents.common.4.0.0.616.nupkg.sha512",
+        "grapecity.documents.common.nuspec",
+        "icon.png",
+        "lib/net461/GrapeCity.Documents.Common.dll",
+        "lib/net461/GrapeCity.Documents.Common.xml",
+        "lib/net461/ja/GrapeCity.Documents.Common.resources.dll",
+        "lib/netstandard2.0/GrapeCity.Documents.Common.dll",
+        "lib/netstandard2.0/GrapeCity.Documents.Common.xml",
+        "lib/netstandard2.0/ja/GrapeCity.Documents.Common.resources.dll"
+      ]
+    },
+    "GrapeCity.Documents.Html/4.0.0.616": {
+      "sha512": "bkB2PK8pMp8K6Zp+Jz+9mrE0m1xkuO/XQfFc8sRP0uY0j00XQlyX/byjQ6xt/W0ud5J4bT+88qHXLk3LQTs+eA==",
+      "type": "package",
+      "path": "grapecity.documents.html/4.0.0.616",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "3rd-party-software.txt",
+        "LICENSE.txt",
+        "build/GrapeCity.Documents.Html.targets",
+        "grapecity.documents.html.4.0.0.616.nupkg.sha512",
+        "grapecity.documents.html.nuspec",
+        "icon.png",
+        "lib/net461/GrapeCity.Documents.Html.dll",
+        "lib/net461/GrapeCity.Documents.Html.xml",
+        "lib/netstandard2.0/GrapeCity.Documents.Html.dll",
+        "lib/netstandard2.0/GrapeCity.Documents.Html.xml",
+        "runtimes/icudtl.dat"
+      ]
+    },
+    "GrapeCity.Documents.Html.Linux.X64/4.0.0.616": {
+      "sha512": "Vjzs0JAf2BaJntPGnAvZUKYkboTlGhaIJVhym4RIVTeFxAAc3rnglPqXChwBKGI0vubFKEMzy6xdWxM5lZokHA==",
+      "type": "package",
+      "path": "grapecity.documents.html.linux.x64/4.0.0.616",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "3rd-party-software.txt",
+        "LICENSE.txt",
+        "build/GrapeCity.Documents.Html.Linux.X64.targets",
+        "grapecity.documents.html.linux.x64.4.0.0.616.nupkg.sha512",
+        "grapecity.documents.html.linux.x64.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/GrapeCity.Documents.Html.Linux.X64.dll",
+        "runtimes/gchtmltopdf.so",
+        "runtimes/swiftshader/libEGL.so",
+        "runtimes/swiftshader/libGLESv2.so"
+      ]
+    },
+    "GrapeCity.Documents.Html.Mac.X64/4.0.0.616": {
+      "sha512": "eI6E8RlkK2z3aHUC8EW4hfpZyCrkO1pkHIxl1KTcAHFPsOPdE14Mct5kdYIIDPJgLc2MTogL/PXlJaIJsWXEqg==",
+      "type": "package",
+      "path": "grapecity.documents.html.mac.x64/4.0.0.616",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "3rd-party-software.txt",
+        "LICENSE.txt",
+        "build/GrapeCity.Documents.Html.Mac.X64.targets",
+        "grapecity.documents.html.mac.x64.4.0.0.616.nupkg.sha512",
+        "grapecity.documents.html.mac.x64.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/GrapeCity.Documents.Html.Mac.X64.dll",
+        "runtimes/gchtmltopdf.dylib",
+        "runtimes/libswiftshader_libEGL.dylib",
+        "runtimes/libswiftshader_libGLESv2.dylib"
+      ]
+    },
+    "GrapeCity.Documents.Html.Windows.X64/4.0.0.616": {
+      "sha512": "O92dVxTS/WedPBxaLB6qF72E7OPVIfCuxctI/aAylTX8s8/ctjCJkdOr9t8uA3Cf+ejqMhsidFthx/fXUu6ceg==",
+      "type": "package",
+      "path": "grapecity.documents.html.windows.x64/4.0.0.616",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "3rd-party-software.txt",
+        "LICENSE.txt",
+        "build/GrapeCity.Documents.Html.Windows.X64.targets",
+        "grapecity.documents.html.windows.x64.4.0.0.616.nupkg.sha512",
+        "grapecity.documents.html.windows.x64.nuspec",
+        "icon.png",
+        "lib/net461/GrapeCity.Documents.Html.Windows.X64.dll",
+        "lib/netstandard2.0/GrapeCity.Documents.Html.Windows.X64.dll",
+        "runtimes/GcHtmlToPdf.exe",
+        "runtimes/swiftshader/libEGL.dll",
+        "runtimes/swiftshader/libGLESv2.dll"
+      ]
+    },
+    "GrapeCity.Documents.Imaging/4.0.0.616": {
+      "sha512": "RHOzLCQe+Q5c5Et6NWHkQThHJs7m/o/j/KcpJDaTR5sLoFydThFA+m6idSDfRIyKgQP6jAolYtFrQ1N1cg8TvA==",
+      "type": "package",
+      "path": "grapecity.documents.imaging/4.0.0.616",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "3rd-party-software.txt",
+        "LICENSE.txt",
+        "grapecity.documents.imaging.4.0.0.616.nupkg.sha512",
+        "grapecity.documents.imaging.nuspec",
+        "icon.png",
+        "lib/net461/GrapeCity.Documents.Imaging.dll",
+        "lib/net461/GrapeCity.Documents.Imaging.xml",
+        "lib/net461/ja/GrapeCity.Documents.Imaging.resources.dll",
+        "lib/netstandard2.0/GrapeCity.Documents.Imaging.dll",
+        "lib/netstandard2.0/GrapeCity.Documents.Imaging.xml",
+        "lib/netstandard2.0/ja/GrapeCity.Documents.Imaging.resources.dll",
+        "readme.md"
+      ]
+    },
+    "GrapeCity.Documents.Pdf/4.0.0.616": {
+      "sha512": "18hLULeQ5X5D0EMlOUGtapDRrx5/c5VHLgRk4Ug2GQkoQfJM+6C1Itlpr5zvk7SRFN3KoEvz/Fr5sQk7DjqjqQ==",
+      "type": "package",
+      "path": "grapecity.documents.pdf/4.0.0.616",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "3rd-party-software.txt",
+        "LICENSE.txt",
+        "grapecity.documents.pdf.4.0.0.616.nupkg.sha512",
+        "grapecity.documents.pdf.nuspec",
+        "icon.png",
+        "lib/net461/GrapeCity.Documents.Pdf.dll",
+        "lib/net461/GrapeCity.Documents.Pdf.xml",
+        "lib/net461/ja/GrapeCity.Documents.Pdf.resources.dll",
+        "lib/netstandard2.0/GrapeCity.Documents.Pdf.dll",
+        "lib/netstandard2.0/GrapeCity.Documents.Pdf.xml",
+        "lib/netstandard2.0/ja/GrapeCity.Documents.Pdf.resources.dll",
+        "readme.md"
+      ]
+    },
+    "Portable.BouncyCastle/1.8.2": {
+      "sha512": "XpJVIhjPiO0o+DU36eeIzqnRilDmE8Z7Kfhm9V9o1yNqM3ikgleD94Z5W/LeEu3t63LaZl2CNJexaix+I6AUMg==",
+      "type": "package",
+      "path": "portable.bouncycastle/1.8.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/BouncyCastle.Crypto.dll",
+        "lib/net40/BouncyCastle.Crypto.xml",
+        "lib/netstandard1.0/BouncyCastle.Crypto.dll",
+        "lib/netstandard1.0/BouncyCastle.Crypto.xml",
+        "lib/netstandard1.3/BouncyCastle.Crypto.dll",
+        "lib/netstandard1.3/BouncyCastle.Crypto.xml",
+        "lib/netstandard2.0/BouncyCastle.Crypto.dll",
+        "lib/netstandard2.0/BouncyCastle.Crypto.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/BouncyCastle.Crypto.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/BouncyCastle.Crypto.xml",
+        "portable.bouncycastle.1.8.2.nupkg.sha512",
+        "portable.bouncycastle.nuspec"
+      ]
+    },
+    "System.Buffers/4.4.0": {
+      "sha512": "AwarXzzoDwX6BgrhjoJsk6tUezZEozOT5Y9QKF94Gl4JK91I4PIIBkBco9068Y9/Dra8Dkbie99kXB8+1BaYKw==",
+      "type": "package",
+      "path": "system.buffers/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "lib/netstandard1.1/System.Buffers.xml",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Buffers.dll",
+        "ref/netstandard1.1/System.Buffers.xml",
+        "ref/netstandard2.0/System.Buffers.dll",
+        "ref/netstandard2.0/System.Buffers.xml",
+        "system.buffers.4.4.0.nupkg.sha512",
+        "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Memory/4.5.0": {
+      "sha512": "m0psCSpUxTGfvwyO0i03ajXVhgBqyXlibXz0Mo1dtKGjaHrXFLnuQ8rNBTmWRqbfRjr4eC6Wah4X5FfuFDu5og==",
+      "type": "package",
+      "path": "system.memory/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "lib/uap10.0.16300/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.1/_._",
+        "ref/netstandard1.1/System.Memory.dll",
+        "ref/netstandard1.1/System.Memory.xml",
+        "ref/netstandard2.0/System.Memory.dll",
+        "ref/netstandard2.0/System.Memory.xml",
+        "ref/uap10.0.16300/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.memory.4.5.0.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Numerics.Vectors/4.4.0": {
+      "sha512": "UiLzLW+Lw6HLed1Hcg+8jSRttrbuXv7DANVj0DkL9g6EnnzbL75EB7EWsw5uRbhxd/4YdG8li5XizGWepmG3PQ==",
+      "type": "package",
+      "path": "system.numerics.vectors/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Numerics.Vectors.dll",
+        "lib/net46/System.Numerics.Vectors.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Numerics.Vectors.dll",
+        "lib/netstandard1.0/System.Numerics.Vectors.xml",
+        "lib/netstandard2.0/System.Numerics.Vectors.dll",
+        "lib/netstandard2.0/System.Numerics.Vectors.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Numerics.Vectors.dll",
+        "ref/net46/System.Numerics.Vectors.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/System.Numerics.Vectors.dll",
+        "ref/netstandard1.0/System.Numerics.Vectors.xml",
+        "ref/netstandard2.0/System.Numerics.Vectors.dll",
+        "ref/netstandard2.0/System.Numerics.Vectors.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.numerics.vectors.4.4.0.nupkg.sha512",
+        "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.0": {
+      "sha512": "YrzNWduCDHhUaSRBxHxL11UkM2fD6y8hITHis4/LbQZ6vj3vdRjoH3IoPWWC9uDXK2wHIqn+b5gv1Np/VKyM1g==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/uap10.0.16300/_._",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/uap10.0.16300/_._",
+        "system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "GrapeCity.Documents.Html >= 4.0.0.616",
+      "GrapeCity.Documents.Html.Linux.X64 >= 4.0.0.616",
+      "GrapeCity.Documents.Html.Mac.X64 >= 4.0.0.616",
+      "GrapeCity.Documents.Html.Windows.X64 >= 4.0.0.616"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\yri066.ru\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\GitHub\\HackLife_HtmlRender\\HtmlToImage\\HtmlToImage.csproj",
+      "projectName": "HtmlToImage",
+      "projectPath": "D:\\GitHub\\HackLife_HtmlRender\\HtmlToImage\\HtmlToImage.csproj",
+      "packagesPath": "C:\\Users\\yri066.ru\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\HackLife_HtmlRender\\HtmlToImage\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\yri066.ru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "dependencies": {
+          "GrapeCity.Documents.Html": {
+            "target": "Package",
+            "version": "[4.0.0.616, )"
+          },
+          "GrapeCity.Documents.Html.Linux.X64": {
+            "target": "Package",
+            "version": "[4.0.0.616, )"
+          },
+          "GrapeCity.Documents.Html.Mac.X64": {
+            "target": "Package",
+            "version": "[4.0.0.616, )"
+          },
+          "GrapeCity.Documents.Html.Windows.X64": {
+            "target": "Package",
+            "version": "[4.0.0.616, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

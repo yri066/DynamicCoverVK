@@ -12,10 +12,10 @@ namespace Wallpaper.Model
 {
     public class PublicationWallPaper
     {
-        private const string VK_GROUP_ID = "";
-        private const string VK_KEY = "";
+        private const string VK_GROUP_ID = "YOUR_GROUP_ID";
+        private const string VK_GROUP_KEY = "YOUR_GROUP_KEY_API";
 
-        private const string VkUrl = @"https://api.vk.com/method/photos.getOwnerCoverPhotoUploadServer?group_id=" + VK_GROUP_ID + "&crop_x=00&crop_y=0&crop_x2=1590&crop_y2=400&&access_token=" + VK_KEY + "&v=5.124";
+        private const string VkUrl = @"https://api.vk.com/method/photos.getOwnerCoverPhotoUploadServer?group_id=" + VK_GROUP_ID + "&crop_x=00&crop_y=0&crop_x2=1590&crop_y2=400&&access_token=" + VK_GROUP_KEY + "&v=5.124";
         
         public async Task CreateImageAsync()
         {
@@ -25,11 +25,11 @@ namespace Wallpaper.Model
 
             if(RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                 p.StartInfo.FileName = Environment.CurrentDirectory + @"\HtmlRender\HtmlToImage.exe";
-            //Console.WriteLine(Environment.CurrentDirectory);
+            
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) || RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
                 p.StartInfo.FileName = Environment.CurrentDirectory + @"/HtmlRender/HtmlToImage";
             
-            p.StartInfo.Arguments = "https://hacklife.badwolf.tech/wallpaperurl.php";
+            p.StartInfo.Arguments = "YOUR_WEB_PAGE_URL";
             p.Start();
             string output = p.StandardOutput.ReadToEnd();
             p.WaitForExit();
@@ -48,8 +48,7 @@ namespace Wallpaper.Model
             string hash = result.Substring(result.IndexOf("h\":\"") + 4, result.IndexOf("photo") - 3 - (result.IndexOf("h\":\"") + 4));
             string photo = result.Substring(result.IndexOf("photo") + 8, result.IndexOf("}") - 1 - (result.IndexOf("photo") + 8));
 
-            string SendPhoto = "https://api.vk.com/method/photos.saveOwnerCoverPhoto?hash=" + hash + "&photo=" + photo + "&access_token=" + VK_KEY + "&v=5.124";
-            //string SendPhoto = "https://api.vk.com/method/photos.saveOwnerCoverPhoto?hash=" + hash + "&photo=" + photo + "&access_token=" + VK_KEY2 + "&v=5.124";
+            string SendPhoto = "https://api.vk.com/method/photos.saveOwnerCoverPhoto?hash=" + hash + "&photo=" + photo + "&access_token=" + VK_GROUP_KEY + "&v=5.124";
             await PostToUrl(SendPhoto);
 
             GC.Collect(3);

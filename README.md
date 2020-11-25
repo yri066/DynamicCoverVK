@@ -4,3 +4,5 @@
 
 Сборка: 
 вначале собрать проект Wallpaper, в собранном проекте создать папку HtmlRender и в нее разместить собранный проект HtmlToImage
+
+В файле Wallpaper/Model/PublicationWallPaper.cs указывается ID группы, ключ доступа и ссылка на web-страницу.

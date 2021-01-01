@@ -2,7 +2,7 @@
  
 Программа создает обложку из web-страницы и загружает в группу ВК
 
-[Пример работы в группе](https://vk.com/st_petersburg_group), [импользуемая web-страница](https://hacklife.badwolf.tech/wallpaperurl.php)
+[Пример работы в группе](https://vk.com/st_petersburg_group), [импользуемая web-страница (случайные дома на CSS)](https://hacklife.badwolf.tech/wallpaperurl.php)
 
 Сборка: 
 вначале собрать проект Wallpaper, в собранном проекте создать папку HtmlRender и в нее разместить собранный проект HtmlToImage

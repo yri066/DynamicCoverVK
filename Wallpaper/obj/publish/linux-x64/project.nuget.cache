@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "YHizt+N2xy+8Wxo+h7pucSx5hq/vDHpST9F5k8gZDCbo0kqV2KPNeGFkFhDVpEkhfgZ0aKooGpXsnSBFQDwNNg==",
+  "dgSpecHash": "HfCdqQ+jYqQs9YN2Ch0SMvMSSwenbfs22zxpP1wN0bUMutIqiFEIroQifuU3uKKt2b04lswDIDoGCHWrBH6/dQ==",
   "success": true,
-  "projectFilePath": "D:\\Desktop\\hakckaton\\Wallpaper\\Wallpaper\\Wallpaper.csproj",
+  "projectFilePath": "D:\\github\\DynamicCoverVK\\Wallpaper\\Wallpaper.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\yri066.ru\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\3.1.9\\microsoft.netcore.app.runtime.linux-x64.3.1.9.nupkg.sha512",
-    "C:\\Users\\yri066.ru\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\3.1.9\\microsoft.aspnetcore.app.runtime.linux-x64.3.1.9.nupkg.sha512",
-    "C:\\Users\\yri066.ru\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\3.1.9\\microsoft.netcore.app.host.linux-x64.3.1.9.nupkg.sha512"
+    "C:\\Users\\yri066.ru\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\3.1.20\\microsoft.netcore.app.runtime.linux-x64.3.1.20.nupkg.sha512",
+    "C:\\Users\\yri066.ru\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\3.1.20\\microsoft.aspnetcore.app.runtime.linux-x64.3.1.20.nupkg.sha512",
+    "C:\\Users\\yri066.ru\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\3.1.20\\microsoft.netcore.app.host.linux-x64.3.1.20.nupkg.sha512"
   ],
   "logs": []
 }

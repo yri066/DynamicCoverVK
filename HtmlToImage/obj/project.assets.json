@@ -45,7 +45,7 @@
           "build/GrapeCity.Documents.Html.Linux.X64.targets": {}
         }
       },
-      "GrapeCity.Documents.Html.Mac.X64/4.0.0.616": {
+      "GrapeCity.Documents.Html.Mac.X64/4.2.0.726": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/GrapeCity.Documents.Html.Mac.X64.dll": {}
@@ -57,7 +57,7 @@
           "build/GrapeCity.Documents.Html.Mac.X64.targets": {}
         }
       },
-      "GrapeCity.Documents.Html.Windows.X64/4.0.0.616": {
+      "GrapeCity.Documents.Html.Windows.X64/4.2.0.726": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/GrapeCity.Documents.Html.Windows.X64.dll": {}
@@ -216,17 +216,17 @@
         "runtimes/swiftshader/libGLESv2.so"
       ]
     },
-    "GrapeCity.Documents.Html.Mac.X64/4.0.0.616": {
-      "sha512": "eI6E8RlkK2z3aHUC8EW4hfpZyCrkO1pkHIxl1KTcAHFPsOPdE14Mct5kdYIIDPJgLc2MTogL/PXlJaIJsWXEqg==",
+    "GrapeCity.Documents.Html.Mac.X64/4.2.0.726": {
+      "sha512": "5t2fo0bxx4RgRg4fTABjFiSDKk5Jtl/oAcdUC00qa19Jxz0r60WomOugJ6YSpRo+tYoNsMTLbHVvYNEoMnZKUA==",
       "type": "package",
-      "path": "grapecity.documents.html.mac.x64/4.0.0.616",
+      "path": "grapecity.documents.html.mac.x64/4.2.0.726",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "3rd-party-software.txt",
         "LICENSE.txt",
         "build/GrapeCity.Documents.Html.Mac.X64.targets",
-        "grapecity.documents.html.mac.x64.4.0.0.616.nupkg.sha512",
+        "grapecity.documents.html.mac.x64.4.2.0.726.nupkg.sha512",
         "grapecity.documents.html.mac.x64.nuspec",
         "icon.png",
         "lib/netstandard2.0/GrapeCity.Documents.Html.Mac.X64.dll",
@@ -235,17 +235,17 @@
         "runtimes/libswiftshader_libGLESv2.dylib"
       ]
     },
-    "GrapeCity.Documents.Html.Windows.X64/4.0.0.616": {
-      "sha512": "O92dVxTS/WedPBxaLB6qF72E7OPVIfCuxctI/aAylTX8s8/ctjCJkdOr9t8uA3Cf+ejqMhsidFthx/fXUu6ceg==",
+    "GrapeCity.Documents.Html.Windows.X64/4.2.0.726": {
+      "sha512": "b73vStUrPa34i89xUVWGYe72QVirqyJfWLNJ/XgQZENzgQ7wBnDnsIc/eDxhnBauKmU1RwxQyJO1vd6fosPVyQ==",
       "type": "package",
-      "path": "grapecity.documents.html.windows.x64/4.0.0.616",
+      "path": "grapecity.documents.html.windows.x64/4.2.0.726",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "3rd-party-software.txt",
         "LICENSE.txt",
         "build/GrapeCity.Documents.Html.Windows.X64.targets",
-        "grapecity.documents.html.windows.x64.4.0.0.616.nupkg.sha512",
+        "grapecity.documents.html.windows.x64.4.2.0.726.nupkg.sha512",
         "grapecity.documents.html.windows.x64.nuspec",
         "icon.png",
         "lib/net461/GrapeCity.Documents.Html.Windows.X64.dll",
@@ -457,28 +457,29 @@
     ".NETCoreApp,Version=v3.1": [
       "GrapeCity.Documents.Html >= 4.0.0.616",
       "GrapeCity.Documents.Html.Linux.X64 >= 4.0.0.616",
-      "GrapeCity.Documents.Html.Mac.X64 >= 4.0.0.616",
-      "GrapeCity.Documents.Html.Windows.X64 >= 4.0.0.616"
+      "GrapeCity.Documents.Html.Mac.X64 >= 4.2.0.726",
+      "GrapeCity.Documents.Html.Windows.X64 >= 4.2.0.726"
     ]
   },
   "packageFolders": {
     "C:\\Users\\yri066.ru\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\HackLife_HtmlRender\\HtmlToImage\\HtmlToImage.csproj",
+      "projectUniqueName": "D:\\github\\DynamicCoverVK\\HtmlToImage\\HtmlToImage.csproj",
       "projectName": "HtmlToImage",
-      "projectPath": "D:\\GitHub\\HackLife_HtmlRender\\HtmlToImage\\HtmlToImage.csproj",
+      "projectPath": "D:\\github\\DynamicCoverVK\\HtmlToImage\\HtmlToImage.csproj",
       "packagesPath": "C:\\Users\\yri066.ru\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\HackLife_HtmlRender\\HtmlToImage\\obj\\",
+      "outputPath": "D:\\github\\DynamicCoverVK\\HtmlToImage\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\yri066.ru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -514,11 +515,11 @@
           },
           "GrapeCity.Documents.Html.Mac.X64": {
             "target": "Package",
-            "version": "[4.0.0.616, )"
+            "version": "[4.2.0.726, )"
           },
           "GrapeCity.Documents.Html.Windows.X64": {
             "target": "Package",
-            "version": "[4.0.0.616, )"
+            "version": "[4.2.0.726, )"
           }
         },
         "imports": [
@@ -536,7 +537,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

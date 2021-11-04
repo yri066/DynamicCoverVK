@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,30 +10,32 @@ namespace Wallpaper.Model
 {
     public class BackgroundTimePublication : BackgroundService
     {
+        public IConfiguration AppConfiguration { get; set; }
+        public BackgroundTimePublication()
+        {
+            var builder = new ConfigurationBuilder().AddJsonFile("WallSettings.json");
+            AppConfiguration = builder.Build();
+        }
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
             while (!stoppingToken.IsCancellationRequested)
             {
-                if (DateTime.Now.Second != 0)
-                {
-                    await Task.Delay(1000, stoppingToken);
-                }
-                else
+                if (DateTime.Now.Second == 0)
                 {
                     try
                     {
-                        await new PublicationWallPaper().CreateImageAsync();
+                        await Task.Run(() => new PublicationWallPaper(AppConfiguration).SetImage());
                         GC.Collect(3);
                     }
                     catch (Exception e)
                     {
-                        Console.WriteLine(DateTime.Now.ToString() + " " + "Error");
+                        Console.WriteLine(DateTime.Now.ToString() + " Error ");
                         Console.WriteLine(e);
                     }
-                    finally
-                    {
-                        await Task.Delay(1000, stoppingToken);
-                    }
+                }
+                else
+                {
+                    Thread.Sleep(1000);
                 }
             }
         }

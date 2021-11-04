@@ -5,4 +5,10 @@
     <UserSecretsId>8c31908a-0521-49ae-a966-36b70bdbcac4</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Update="WallSettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

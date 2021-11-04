@@ -10,15 +10,17 @@ namespace HtmlToImage
         static void Main(string[] args)
         {
             var uri = new Uri(args[0]);
+            int width = Int32.Parse(args[1]);
+            int height = Int32.Parse(args[2]);
 
             using (var re = new GcHtmlRenderer(uri))
             {
-                re.VirtualTimeBudget = 5000;//Задержка перед созданием изображения
+                re.VirtualTimeBudget = 15000; //Задержка перед созданием изображения
 
-                PngSettings pngSettings = new PngSettings//Параметры изображения
+                PngSettings pngSettings = new PngSettings //Параметры изображения
                 {
                     DefaultBackgroundColor = Color.White,
-                    WindowSize = new Size(1590, 400)
+                    WindowSize = new Size(width, height)
                 };
 
                 using (MemoryStream memoryStream = new MemoryStream())

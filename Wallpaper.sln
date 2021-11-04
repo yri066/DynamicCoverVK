@@ -5,14 +5,7 @@ VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wallpaper", "Wallpaper\Wallpaper.csproj", "{86644B67-D8A5-4196-9753-A1B2E57BBC02}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wall", "Wall", "{7ED0A955-FEC2-4173-B428-0203D999C9A6}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HtmlRender", "HtmlRender", "{3B4E2FB9-6282-493A-BF31-44F6747E7A7A}"
-	ProjectSection(SolutionItems) = preProject
-		TextFile1.txt = TextFile1.txt
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlToImage", "HtmlToImage\HtmlToImage.csproj", "{5F9BF3BC-654A-471F-A1D9-B5AE8CF96B31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlToImage", "HtmlToImage\HtmlToImage.csproj", "{5F9BF3BC-654A-471F-A1D9-B5AE8CF96B31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,9 +24,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{3B4E2FB9-6282-493A-BF31-44F6747E7A7A} = {7ED0A955-FEC2-4173-B428-0203D999C9A6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {77669AA7-D195-4834-9824-CDB5C681F02C}

@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\HackLife_HtmlRender\\HtmlToImage\\HtmlToImage.csproj": {}
+    "D:\\GitHub\\DynamicCoverVK\\HtmlToImage\\HtmlToImage.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\HackLife_HtmlRender\\HtmlToImage\\HtmlToImage.csproj": {
+    "D:\\GitHub\\DynamicCoverVK\\HtmlToImage\\HtmlToImage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\HackLife_HtmlRender\\HtmlToImage\\HtmlToImage.csproj",
+        "projectUniqueName": "D:\\GitHub\\DynamicCoverVK\\HtmlToImage\\HtmlToImage.csproj",
         "projectName": "HtmlToImage",
-        "projectPath": "D:\\GitHub\\HackLife_HtmlRender\\HtmlToImage\\HtmlToImage.csproj",
+        "projectPath": "D:\\GitHub\\DynamicCoverVK\\HtmlToImage\\HtmlToImage.csproj",
         "packagesPath": "C:\\Users\\yri066.ru\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\HackLife_HtmlRender\\HtmlToImage\\obj\\",
+        "outputPath": "D:\\GitHub\\DynamicCoverVK\\HtmlToImage\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\yri066.ru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -53,11 +54,11 @@
             },
             "GrapeCity.Documents.Html.Mac.X64": {
               "target": "Package",
-              "version": "[4.0.0.616, )"
+              "version": "[4.2.0.726, )"
             },
             "GrapeCity.Documents.Html.Windows.X64": {
               "target": "Package",
-              "version": "[4.0.0.616, )"
+              "version": "[4.2.0.726, )"
             }
           },
           "imports": [
@@ -75,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

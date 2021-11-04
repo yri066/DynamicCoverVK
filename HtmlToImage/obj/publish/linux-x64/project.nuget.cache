@@ -1,22 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "dSRbYRjCflLdJ50KedO6UL+iOvABSZ0ZFnC2FXBsFk/cXxbZoQb1qjCK7Sv8oM9kd9FALn2JP/FoCCkLkbtq3A==",
+  "dgSpecHash": "fyU+IwWUVAyv7vl2hwWxwYzO5Ne3ums2KekA6h9ov63HxxsQ/2Mtx4mmpdZZKMegTv9/ZNGG7If9RQzy1zDIFA==",
   "success": true,
-  "projectFilePath": "D:\\Desktop\\hakckaton\\Wallpaper\\HtmlToImage\\HtmlToImage.csproj",
+  "projectFilePath": "D:\\github\\DynamicCoverVK\\HtmlToImage\\HtmlToImage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yri066.ru\\.nuget\\packages\\grapecity.documents.common\\4.0.0.616\\grapecity.documents.common.4.0.0.616.nupkg.sha512",
     "C:\\Users\\yri066.ru\\.nuget\\packages\\grapecity.documents.html\\4.0.0.616\\grapecity.documents.html.4.0.0.616.nupkg.sha512",
     "C:\\Users\\yri066.ru\\.nuget\\packages\\grapecity.documents.html.linux.x64\\4.0.0.616\\grapecity.documents.html.linux.x64.4.0.0.616.nupkg.sha512",
+    "C:\\Users\\yri066.ru\\.nuget\\packages\\grapecity.documents.html.windows.x64\\4.2.0.726\\grapecity.documents.html.windows.x64.4.2.0.726.nupkg.sha512",
     "C:\\Users\\yri066.ru\\.nuget\\packages\\grapecity.documents.imaging\\4.0.0.616\\grapecity.documents.imaging.4.0.0.616.nupkg.sha512",
     "C:\\Users\\yri066.ru\\.nuget\\packages\\grapecity.documents.pdf\\4.0.0.616\\grapecity.documents.pdf.4.0.0.616.nupkg.sha512",
     "C:\\Users\\yri066.ru\\.nuget\\packages\\portable.bouncycastle\\1.8.2\\portable.bouncycastle.1.8.2.nupkg.sha512",
     "C:\\Users\\yri066.ru\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
     "C:\\Users\\yri066.ru\\.nuget\\packages\\system.memory\\4.5.0\\system.memory.4.5.0.nupkg.sha512",
     "C:\\Users\\yri066.ru\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
-    "C:\\Users\\yri066.ru\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\3.1.9\\microsoft.netcore.app.runtime.linux-x64.3.1.9.nupkg.sha512",
-    "C:\\Users\\yri066.ru\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\3.1.9\\microsoft.aspnetcore.app.runtime.linux-x64.3.1.9.nupkg.sha512",
-    "C:\\Users\\yri066.ru\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\3.1.9\\microsoft.netcore.app.host.linux-x64.3.1.9.nupkg.sha512"
+    "C:\\Users\\yri066.ru\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
+    "C:\\Users\\yri066.ru\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\3.1.20\\microsoft.netcore.app.runtime.linux-x64.3.1.20.nupkg.sha512",
+    "C:\\Users\\yri066.ru\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\3.1.20\\microsoft.aspnetcore.app.runtime.linux-x64.3.1.20.nupkg.sha512",
+    "C:\\Users\\yri066.ru\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\3.1.20\\microsoft.netcore.app.host.linux-x64.3.1.20.nupkg.sha512"
   ],
   "logs": []
 }

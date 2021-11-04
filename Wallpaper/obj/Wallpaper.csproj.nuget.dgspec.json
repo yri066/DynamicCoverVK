@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\HackLife_HtmlRender\\Wallpaper\\Wallpaper.csproj": {}
+    "D:\\GitHub\\DynamicCoverVK\\Wallpaper\\Wallpaper.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\HackLife_HtmlRender\\Wallpaper\\Wallpaper.csproj": {
+    "D:\\GitHub\\DynamicCoverVK\\Wallpaper\\Wallpaper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\HackLife_HtmlRender\\Wallpaper\\Wallpaper.csproj",
+        "projectUniqueName": "D:\\GitHub\\DynamicCoverVK\\Wallpaper\\Wallpaper.csproj",
         "projectName": "Wallpaper",
-        "projectPath": "D:\\GitHub\\HackLife_HtmlRender\\Wallpaper\\Wallpaper.csproj",
+        "projectPath": "D:\\GitHub\\DynamicCoverVK\\Wallpaper\\Wallpaper.csproj",
         "packagesPath": "C:\\Users\\yri066.ru\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\HackLife_HtmlRender\\Wallpaper\\obj\\",
+        "outputPath": "D:\\GitHub\\DynamicCoverVK\\Wallpaper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\yri066.ru\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -60,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

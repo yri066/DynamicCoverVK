@@ -1,21 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "R6ShJjryOtjRorlPWDo6QWR9T8PyIOYyptfIbFvl0DjFNAzKE0YYIB9xev6Ck7s8ldEaFTxWbW7hqcaPAhx1xw==",
+  "dgSpecHash": "npuUpwKwehHjJZPe/raKb3YAmadcjXHviLaSKooxl5ew1ervN18BtJsEEsdHo0Xiq+mSj16HjgKVvg/B8Jr7Bw==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\HackLife_HtmlRender\\HtmlToImage\\HtmlToImage.csproj",
+  "projectFilePath": "D:\\GitHub\\DynamicCoverVK\\HtmlToImage\\HtmlToImage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yri066.ru\\.nuget\\packages\\grapecity.documents.common\\4.0.0.616\\grapecity.documents.common.4.0.0.616.nupkg.sha512",
     "C:\\Users\\yri066.ru\\.nuget\\packages\\grapecity.documents.html\\4.0.0.616\\grapecity.documents.html.4.0.0.616.nupkg.sha512",
     "C:\\Users\\yri066.ru\\.nuget\\packages\\grapecity.documents.html.linux.x64\\4.0.0.616\\grapecity.documents.html.linux.x64.4.0.0.616.nupkg.sha512",
-    "C:\\Users\\yri066.ru\\.nuget\\packages\\grapecity.documents.html.mac.x64\\4.0.0.616\\grapecity.documents.html.mac.x64.4.0.0.616.nupkg.sha512",
-    "C:\\Users\\yri066.ru\\.nuget\\packages\\grapecity.documents.html.windows.x64\\4.0.0.616\\grapecity.documents.html.windows.x64.4.0.0.616.nupkg.sha512",
+    "C:\\Users\\yri066.ru\\.nuget\\packages\\grapecity.documents.html.mac.x64\\4.2.0.726\\grapecity.documents.html.mac.x64.4.2.0.726.nupkg.sha512",
+    "C:\\Users\\yri066.ru\\.nuget\\packages\\grapecity.documents.html.windows.x64\\4.2.0.726\\grapecity.documents.html.windows.x64.4.2.0.726.nupkg.sha512",
     "C:\\Users\\yri066.ru\\.nuget\\packages\\grapecity.documents.imaging\\4.0.0.616\\grapecity.documents.imaging.4.0.0.616.nupkg.sha512",
     "C:\\Users\\yri066.ru\\.nuget\\packages\\grapecity.documents.pdf\\4.0.0.616\\grapecity.documents.pdf.4.0.0.616.nupkg.sha512",
     "C:\\Users\\yri066.ru\\.nuget\\packages\\portable.bouncycastle\\1.8.2\\portable.bouncycastle.1.8.2.nupkg.sha512",
     "C:\\Users\\yri066.ru\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
     "C:\\Users\\yri066.ru\\.nuget\\packages\\system.memory\\4.5.0\\system.memory.4.5.0.nupkg.sha512",
     "C:\\Users\\yri066.ru\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512"
+    "C:\\Users\\yri066.ru\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

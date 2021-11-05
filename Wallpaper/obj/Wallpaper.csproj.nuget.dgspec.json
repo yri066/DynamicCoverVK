@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\DynamicCoverVK\\Wallpaper\\Wallpaper.csproj": {}
+    "D:\\github\\DynamicCoverVK\\Wallpaper\\Wallpaper.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\DynamicCoverVK\\Wallpaper\\Wallpaper.csproj": {
+    "D:\\github\\DynamicCoverVK\\Wallpaper\\Wallpaper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\DynamicCoverVK\\Wallpaper\\Wallpaper.csproj",
+        "projectUniqueName": "D:\\github\\DynamicCoverVK\\Wallpaper\\Wallpaper.csproj",
         "projectName": "Wallpaper",
-        "projectPath": "D:\\GitHub\\DynamicCoverVK\\Wallpaper\\Wallpaper.csproj",
+        "projectPath": "D:\\github\\DynamicCoverVK\\Wallpaper\\Wallpaper.csproj",
         "packagesPath": "C:\\Users\\yri066.ru\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\DynamicCoverVK\\Wallpaper\\obj\\",
+        "outputPath": "D:\\github\\DynamicCoverVK\\Wallpaper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

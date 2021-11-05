@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "npuUpwKwehHjJZPe/raKb3YAmadcjXHviLaSKooxl5ew1ervN18BtJsEEsdHo0Xiq+mSj16HjgKVvg/B8Jr7Bw==",
+  "dgSpecHash": "7LYXqvTzOrKB5TeUSW3p7MqnX6FDOosZ8PbZB9VvjedTbQOzCsPKkulMolRM3R3HA3l1XZAWyRKP6GD83rIg9A==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\DynamicCoverVK\\HtmlToImage\\HtmlToImage.csproj",
+  "projectFilePath": "D:\\github\\DynamicCoverVK\\HtmlToImage\\HtmlToImage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yri066.ru\\.nuget\\packages\\grapecity.documents.common\\4.0.0.616\\grapecity.documents.common.4.0.0.616.nupkg.sha512",
     "C:\\Users\\yri066.ru\\.nuget\\packages\\grapecity.documents.html\\4.0.0.616\\grapecity.documents.html.4.0.0.616.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\DynamicCoverVK\\HtmlToImage\\HtmlToImage.csproj": {}
+    "D:\\github\\DynamicCoverVK\\HtmlToImage\\HtmlToImage.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\DynamicCoverVK\\HtmlToImage\\HtmlToImage.csproj": {
+    "D:\\github\\DynamicCoverVK\\HtmlToImage\\HtmlToImage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\DynamicCoverVK\\HtmlToImage\\HtmlToImage.csproj",
+        "projectUniqueName": "D:\\github\\DynamicCoverVK\\HtmlToImage\\HtmlToImage.csproj",
         "projectName": "HtmlToImage",
-        "projectPath": "D:\\GitHub\\DynamicCoverVK\\HtmlToImage\\HtmlToImage.csproj",
+        "projectPath": "D:\\github\\DynamicCoverVK\\HtmlToImage\\HtmlToImage.csproj",
         "packagesPath": "C:\\Users\\yri066.ru\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\DynamicCoverVK\\HtmlToImage\\obj\\",
+        "outputPath": "D:\\github\\DynamicCoverVK\\HtmlToImage\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

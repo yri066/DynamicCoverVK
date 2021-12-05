@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/HtmlToImage/bin
+/HtmlToImage/obj
+/Wallpaper/bin
+/Wallpaper/HtmlRender
+/Wallpaper/obj

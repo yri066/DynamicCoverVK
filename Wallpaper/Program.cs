@@ -1,26 +1,42 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 
 namespace Wallpaper
 {
-    public class Program
+    internal class Program
     {
-        public static void Main(string[] args)
+        public static IConfiguration AppConfiguration { get; set; }
+        static void initProgram()
         {
-            CreateHostBuilder(args).Build().Run();
+            var builder = new ConfigurationBuilder().AddJsonFile("WallSettings.json");
+            AppConfiguration = builder.Build();
         }
-
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
+        static async Task Main(string[] args)
+        {
+            initProgram();
+            Console.WriteLine("Start");
+            while (true)
+            {
+                if (DateTime.Now.Second == 0)
                 {
-                    webBuilder.UseStartup<Startup>();
-                });
+                    try
+                    {
+                        await Task.Run(() => new PublicationWallPaper(AppConfiguration).SetImage());
+                        GC.Collect(3);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(DateTime.Now.ToString() + " Error ");
+                        Console.WriteLine(e);
+                    }
+                }
+                else
+                {
+                    await Task.Delay(1000);
+                }
+            }
+        }
     }
 }

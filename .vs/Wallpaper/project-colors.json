@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "5f9bf3bc-654a-471f-a1d9-b5ae8cf96b31": {
+      "ProjectGuid": "5f9bf3bc-654a-471f-a1d9-b5ae8cf96b31",
+      "DisplayName": "HtmlToImage",
+      "ColorIndex": 0
+    },
+    "86644b67-d8a5-4196-9753-a1b2e57bbc02": {
+      "ProjectGuid": "86644b67-d8a5-4196-9753-a1b2e57bbc02",
+      "DisplayName": "Wallpaper",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "f14f96f1-92a8-4eab-bf0d-07c9f24216b2": {
+      "ProjectGuid": "f14f96f1-92a8-4eab-bf0d-07c9f24216b2",
+      "DisplayName": "Wallpaper",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

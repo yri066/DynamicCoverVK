@@ -1,19 +1,18 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Runtime.InteropServices;
-using System.Threading.Tasks;
 using System.Text.Json;
-using Wallpaper.Class;
+using System.Threading.Tasks;
+using Wallpaper.Model;
 
-namespace Wallpaper.Model
+namespace Wallpaper
 {
-    public class PublicationWallPaper
+    internal class PublicationWallPaper
     {
         public IConfiguration AppConfiguration { get; set; }
         private string VK_GROUP_ID { get; }
@@ -26,7 +25,6 @@ namespace Wallpaper.Model
             this.AppConfiguration = AppConfiguration;
             VK_GROUP_ID = AppConfiguration["VK_GROUP_ID"];
             VK_GROUP_API_KEY = AppConfiguration["VK_GROUP_API_KEY"];
-            
 
             string width = AppConfiguration["width"].ToString();
             string height = AppConfiguration["height"].ToString();

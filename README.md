@@ -1,6 +1,6 @@
 # Динамическая обложка для группы ВКонтакте
 
-<a href="https://codebeat.co/projects/github-com-yri066-dynamiccovervk-main"><img alt="codebeat badge" src="https://codebeat.co/badges/9692e3d7-e316-4b08-a7da-4bbe9c30fcb2" /></a>
+<a href="https://codebeat.co/projects/github-com-yri066-dynamiccovervk-main"><img alt="codebeat badge" src="https://codebeat.co/badges/018fffdf-e62e-4226-a658-884715fd1d2a" /></a>
 
 Программа создает обложку из web-страницы и загружает в группу ВК с периодичностью в 1 минуту.
 

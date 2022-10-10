@@ -2,6 +2,10 @@
 
 <a href="https://codebeat.co/projects/github-com-yri066-dynamiccovervk-main"><img alt="codebeat badge" src="https://codebeat.co/badges/018fffdf-e62e-4226-a658-884715fd1d2a" /></a>
 
+
+Dynamic Cover VK позволяет создать из Web-страницы изображение и установить в качестве обложки с переодичностью в 1 минуту.
+
+
 Для работы необходим установленный: **ASP.NET Core 6**
 
 Сборка: 

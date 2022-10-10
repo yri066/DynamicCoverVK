@@ -16,7 +16,7 @@ namespace Wallpaper
         static async Task Main(string[] args)
         {
             initProgram();
-            Console.WriteLine("Start");
+
             while (true)
             {
                 if (DateTime.Now.Second == 0)

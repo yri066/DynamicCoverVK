@@ -1,7 +1,8 @@
 {
-  "width": 1200,
-  "height": 400,
-  "VK_GROUP_ID": "",
-  "VK_GROUP_API_KEY": "",
-  "WEB_PAGE_URL": "https://picsum.photos/1200/400.webp"
+	"width": 1200,
+	"height": 400,
+	"type": "group",
+	"VK_ID": "",
+	"VK_ACCESS_TOKEN": "",
+	"WEB_PAGE_URL": "https://picsum.photos/1200/400.webp"
 }

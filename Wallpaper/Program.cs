@@ -8,14 +8,16 @@ namespace Wallpaper
     internal class Program
     {
         public static IConfiguration AppConfiguration { get; set; }
-        static void initProgram()
+
+        static void initSettings()
         {
-            var builder = new ConfigurationBuilder().AddJsonFile("WallSettings.json");
+            var builder = new ConfigurationBuilder().AddJsonFile("WallSettings.json", optional: false, reloadOnChange: true);
             AppConfiguration = builder.Build();
         }
+
         static async Task Main(string[] args)
         {
-            initProgram();
+            initSettings();
 
             while (true)
             {
@@ -28,14 +30,11 @@ namespace Wallpaper
                     }
                     catch (Exception e)
                     {
-                        Console.WriteLine(DateTime.Now.ToString() + " Error ");
                         Console.WriteLine(e);
                     }
                 }
-                else
-                {
-                    await Task.Delay(1000);
-                }
+
+                await Task.Delay(1000);
             }
         }
     }

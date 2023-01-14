@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlToImage", "HtmlToImage\HtmlToImage.csproj", "{5F9BF3BC-654A-471F-A1D9-B5AE8CF96B31}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wallpaper", "Wallpaper\Wallpaper.csproj", "{F14F96F1-92A8-4EAB-BF0D-07C9F24216B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wallpaper", "Wallpaper\Wallpaper.csproj", "{F14F96F1-92A8-4EAB-BF0D-07C9F24216B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5F9BF3BC-654A-471F-A1D9-B5AE8CF96B31}.Debug|Any CPU.ActiveCfg = Release|Any CPU
-		{5F9BF3BC-654A-471F-A1D9-B5AE8CF96B31}.Debug|Any CPU.Build.0 = Release|Any CPU
-		{5F9BF3BC-654A-471F-A1D9-B5AE8CF96B31}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5F9BF3BC-654A-471F-A1D9-B5AE8CF96B31}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F14F96F1-92A8-4EAB-BF0D-07C9F24216B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F14F96F1-92A8-4EAB-BF0D-07C9F24216B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F14F96F1-92A8-4EAB-BF0D-07C9F24216B2}.Release|Any CPU.ActiveCfg = Release|Any CPU

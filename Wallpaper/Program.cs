@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 
@@ -8,6 +7,7 @@ namespace Wallpaper
     internal class Program
     {
         public static IConfiguration AppConfiguration { get; set; }
+        public static Application App { get; set; }
 
         static void initSettings()
         {
@@ -18,6 +18,14 @@ namespace Wallpaper
         static async Task Main(string[] args)
         {
             initSettings();
+            App = new Application(AppConfiguration);
+            var start = bool.Parse(AppConfiguration["Browser:StartBrowser"]);
+
+            if (start)
+            {
+                App.Start();
+                await Task.Delay(2000);
+            }
 
             while (true)
             {
@@ -25,8 +33,7 @@ namespace Wallpaper
                 {
                     try
                     {
-                        await Task.Run(() => new PublicationWallPaper(AppConfiguration).SetImage());
-                        GC.Collect(3);
+                        new PublicationCover(AppConfiguration).SetImage();
                     }
                     catch (Exception e)
                     {

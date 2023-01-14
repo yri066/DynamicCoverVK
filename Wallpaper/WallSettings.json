@@ -1,7 +1,13 @@
 {
-	"width": 1200,
-	"height": 400,
-	"type": "group",
+	"Browser": {
+		"StartBrowser": true,
+		"Program": "",
+		"Port": 9222,
+		"Delay": 10000
+	},
+	"Width": 1920,
+	"Height": 768,
+	"Type": "group",
 	"VK_ID": "",
 	"VK_ACCESS_TOKEN": "",
 	"WEB_PAGE_URL": ""

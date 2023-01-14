@@ -6,45 +6,42 @@
 Dynamic Cover VK позволяет создать из Web-страницы изображение и установить в качестве обложки с переодичностью в 1 минуту.
 
 
-Для работы необходим установленный: **ASP.NET Core 6**
+Для работы необходимо установить: **ASP.NET Core 6** и один из следующих браузеров: **`Google Chrome`**, **`Chromium`** или **`Microsoft Edge`**.
 
-Сборка: 
-вначале собрать проект Wallpaper, в собранном проекте создать папку HtmlRender и в нее разместить собранный проект HtmlToImage
+В файле Wallpaper/WallSettings.json указывается длина и ширина изображения, задержка перед созданием изображения, тип страницы (group/client), ID группы или пользователя, ключ доступа, ссылка на web-страницу и другие параметрый:
 
-В файле Wallpaper/WallSettings.json указывается длина и ширина изображения, тип страницы (`group`/`client`), ID группы или пользователя, ключ доступа, и ссылка на web-страницу.
+**StartBrowser** - необходимость запустить браузер в режиме удаленной отладки: true - запустить браузер, false - не заускать (если уже есть запущенный экземпляр).
 
-Проект не поддерживает воспроизведение видео.
+**Program** - запускаемый браузер на основе Chromium:
+1. **Windows**
 
-Для работы проекта на Linux, необходимо установить следующие пакеты:
-```
-sudo apt-get install libxss1 libappindicator1 libindicator7 libnss3-dev
-```
+	1.1. Google Chrome `C:\Program Files\Google\Chrome\Application\chrome.exe`
+	
+	1.2 Microsoft Edge `C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe`
+2. **macOS**
 
-**Поддрежка группы**
+	1.1. Google Chrome `/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`
+3. **Linux**
 
-```
-{
-	"width": 1200,
-	"height": 400,
-	"type": "group",
-	"VK_ID": "152760895",
-	"VK_ACCESS_TOKEN": "ef033c224f574ba43ef033c224f574ba43",
-	"WEB_PAGE_URL": "Web page Url"
-}
-```
-Получить **токен сообщества** можно в: Настройки->Работа с API
+	1.1. Chromium `chromium` или `chromium-browser`
 
-**Поддрежка профиля**
+
+
+Пример параметров для изменения обложки в **профиле ользователя**:
 
 ```
 {
-	"width": 1920,
-	"height": 640,
-	"type": "client",
+	"Browser": {
+		"StartBrowser": true, 
+		"Program": "chromium-browser",
+		"Port": 9222,
+		"Delay": 10000
+	},
+	"Width": 1920,
+	"Height": 768,
+	"Type": "client",
 	"VK_ID": "82169748",
 	"VK_ACCESS_TOKEN": "vk1.a.ef033c224f574ba43ef033c224f574ba43",
-	"WEB_PAGE_URL": "Web page Url"
+	"WEB_PAGE_URL": "https://example.com"
 }
 ```
-Способ получения **токена пользователя** доступен по ссылке - [Authorization Code Flow для получения ключа доступа пользователя](https://dev.vk.com/api/access-token/authcode-flow-user).
-Идентификатор пользователя можно получить: url адрес страницы или в настройках профиля (изменить никнейм).

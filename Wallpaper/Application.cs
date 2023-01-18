@@ -26,7 +26,7 @@ namespace Wallpaper
         /// <summary>
         /// Программа для запуска.
         /// </summary>
-        public string Programm { get; private set; }
+        public string Program { get; private set; }
 
         /// <summary>
         /// Порт для подключения.
@@ -51,12 +51,12 @@ namespace Wallpaper
         /// <summary>
         /// Делегат события завершения работы приложения.
         /// </summary>
-        public delegate void ServerClocedEventHandler();
+        public delegate void ServerClosedEventHandler();
 
         /// <summary>
-        /// Cобытие завершения работы приложения.
+        /// Событие завершения работы приложения.
         /// </summary>
-        public event ServerClocedEventHandler ServerCloced;
+        public event ServerClosedEventHandler ServerClosed;
 
         public Application(IConfiguration configuration)
         {
@@ -69,7 +69,7 @@ namespace Wallpaper
         public void Start()
         {
             CheckApplicationData(_configuration.GetSection("Browser"));
-            Programm = _configuration["Browser:Program"];
+            Program = _configuration["Browser:Program"];
             Port = int.Parse(_configuration["Browser:Port"]);
 
             if (State != Status.Off)
@@ -92,7 +92,7 @@ namespace Wallpaper
         protected void StartServer(EventHandler @event = null)
         {
             _process = new Process();
-            _process.StartInfo.FileName = Programm;
+            _process.StartInfo.FileName = Program;
             _process.StartInfo.Arguments = Arguments;
             _process.StartInfo.UseShellExecute = false;
             _process.StartInfo.RedirectStandardInput = true;
@@ -114,7 +114,7 @@ namespace Wallpaper
 
             State = Status.Off;
 
-            ServerCloced?.Invoke();
+            ServerClosed?.Invoke();
         }
 
         /// <summary>

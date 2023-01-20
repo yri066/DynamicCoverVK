@@ -36,7 +36,7 @@ namespace Wallpaper
         /// <summary>
         /// Аргументы запуска.
         /// </summary>
-        public string Arguments { get { return $"--headless --remote-debugging-port={Port} --disable-gpu"; } }
+        public string Arguments { get { return $"--remote-debugging-port={Port} {_configuration["Browser:Arguments"]}"; } }
 
         /// <summary>
         /// Процесс, управляющий приложением.

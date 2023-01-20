@@ -1,5 +1,6 @@
 {
 	"Browser": {
+		"Arguments": "--headless --disable-gpu",
 		"StartBrowser": true,
 		"Program": "",
 		"Port": 9222,

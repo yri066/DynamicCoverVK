@@ -58,8 +58,7 @@ namespace Wallpaper
                 return;
 
             var output = await GetImage(PageUrl, Width, Height, Delay);
-            using var memoryStream = new MemoryStream(Convert.FromBase64String(output));
-            var bytes = memoryStream.ToArray();
+            var bytes = Convert.FromBase64String(output);
 
             var SendUrlJson = GetToUrl(VkUrl);
             var SendUrl = JsonSerializer.Deserialize<PostUrl>(SendUrlJson).response.upload_url;

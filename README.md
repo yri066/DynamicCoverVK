@@ -32,6 +32,7 @@ Dynamic Cover VK позволяет создать из Web-страницы и�
 ```
 {
 	"Browser": {
+		"Arguments": "--headless --disable-gpu",
 		"StartBrowser": true, 
 		"Program": "chromium-browser",
 		"Port": 9222,

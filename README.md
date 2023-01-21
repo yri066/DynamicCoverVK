@@ -10,14 +10,16 @@ Dynamic Cover VK позволяет создать из Web-страницы и�
 
 В файле Wallpaper/WallSettings.json указывается длина и ширина изображения, задержка перед созданием изображения, тип страницы (group/client), ID группы или пользователя, ключ доступа, ссылка на web-страницу и другие параметры:
 
-**StartBrowser** - необходимость запустить браузер в режиме удаленной отладки: true - запустить браузер, false - не запускать (если уже есть запущенный экземпляр).
+**StartBrowser** - открытие браузера в режиме удаленной отладки: true - запустить браузер, false - не запускать (если уже есть запущенный экземпляр).
+
+**Arguments** - параметры запуска браузера.
 
 **Program** - запускаемый браузер на основе Chromium:
 1. **Windows**
 
-	1.1. Google Chrome `C:\Program Files\Google\Chrome\Application\chrome.exe`
+	1.1. Google Chrome `C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe`
 	
-	1.2 Microsoft Edge `C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe`
+	1.2 Microsoft Edge `C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe`
 2. **macOS**
 
 	1.1. Google Chrome `/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`
@@ -27,9 +29,9 @@ Dynamic Cover VK позволяет создать из Web-страницы и�
 
 
 
-Пример параметров для изменения обложки в **профиле пользователя**:
+<details><summary>Пример параметров для обновления обложки в профиле пользователя на Linux</summary>
 
-```
+```json
 {
 	"Browser": {
 		"Arguments": "--headless --disable-gpu",
@@ -46,3 +48,26 @@ Dynamic Cover VK позволяет создать из Web-страницы и�
 	"WEB_PAGE_URL": "https://example.com"
 }
 ```
+</details>
+
+
+<details><summary>Пример параметров для обновления обложки в сообществе на Windows</summary>
+
+```json
+{
+	"Browser": {
+		"Arguments": "--headless --disable-gpu",
+		"StartBrowser": true, 
+		"Program": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+		"Port": 9222,
+		"Delay": 10000
+	},
+	"Width": 1920,
+	"Height": 768,
+	"Type": "group",
+	"VK_ID": "152760895",
+	"VK_ACCESS_TOKEN": "ad55sjtba43ef033c4ds3fds2fg51c80",
+	"WEB_PAGE_URL": "https://example.com"
+}
+```
+</details>

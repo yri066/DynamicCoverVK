@@ -5,6 +5,8 @@
 
 Dynamic Cover VK позволяет создать из Web-страницы изображение и установить в качестве обложки с переодичностью в 1 минуту.
 
+[Демонстрация работы](https://vk.com/swsusoftwareengineering)
+
 
 Для работы необходимо установить: **ASP.NET Core 6** и один из следующих браузеров: **`Google Chrome`**, **`Chromium`** или **`Microsoft Edge`**.
 

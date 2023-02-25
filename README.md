@@ -36,7 +36,7 @@ Dynamic Cover VK позволяет создать из Web-страницы и�
 ```json
 {
 	"Browser": {
-		"Arguments": "--headless --disable-gpu",
+		"Arguments": "--headless=new",
 		"StartBrowser": true, 
 		"Program": "chromium-browser",
 		"Port": 9222,
@@ -58,7 +58,7 @@ Dynamic Cover VK позволяет создать из Web-страницы и�
 ```json
 {
 	"Browser": {
-		"Arguments": "--headless --disable-gpu",
+		"Arguments": "--headless=new --disable-gpu",
 		"StartBrowser": true, 
 		"Program": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
 		"Port": 9222,

@@ -93,31 +93,28 @@ namespace Wallpaper
         private async Task<string> Receive(ClientWebSocket socket)
         {
             var buffer = new ArraySegment<byte>(new byte[2048]);
-            do
+            WebSocketReceiveResult result;
+
+            using (var stream = new MemoryStream())
             {
-                WebSocketReceiveResult result;
-                using (var stream = new MemoryStream())
+                do
                 {
-                    do
-                    {
-                        result = await socket.ReceiveAsync(buffer, CancellationToken.None);
-                        stream.Write(buffer.Array, buffer.Offset, result.Count);
-                    }
-                    while (!result.EndOfMessage);
+                    result = await socket.ReceiveAsync(buffer, CancellationToken.None);
+                    stream.Write(buffer.Array, buffer.Offset, result.Count);
+                }
+                while (!result.EndOfMessage);
 
-                    if (result.MessageType == WebSocketMessageType.Close)
-                    {
-                        return string.Empty;
-                    }
+                if (result.MessageType == WebSocketMessageType.Close)
+                {
+                    return string.Empty;
+                }
 
-                    stream.Seek(0, SeekOrigin.Begin);
-                    using (var reader = new StreamReader(stream, Encoding.UTF8))
-                    {
-                        return await reader.ReadToEndAsync();
-                    }
+                stream.Seek(0, SeekOrigin.Begin);
+                using (var reader = new StreamReader(stream, Encoding.UTF8))
+                {
+                    return await reader.ReadToEndAsync();
                 }
             }
-            while (true);
         }
 
         public void Dispose()

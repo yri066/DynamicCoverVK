@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System;
 using System.Diagnostics;
+using System.IO;
 
 namespace Wallpaper
 {
@@ -32,6 +33,16 @@ namespace Wallpaper
         /// Порт для подключения.
         /// </summary>
         public int Port { get; private set; } = 9222;
+
+        /// <summary>
+        /// Сохранять идентификатор процесса в файл.
+        /// </summary>
+        public bool SaveID { get; private set; } = false;
+
+        /// <summary>
+        /// Название файла для сохранения идентификатора процесса.
+        /// </summary>
+        public readonly string ProcessIdFile = "process.pid";
 
         /// <summary>
         /// Аргументы запуска.
@@ -68,9 +79,12 @@ namespace Wallpaper
         /// </summary>
         public void Start()
         {
-            CheckApplicationData(_configuration.GetSection("Browser"));
-            Program = _configuration["Browser:Program"];
-            Port = int.Parse(_configuration["Browser:Port"]);
+            var configuration = _configuration.GetSection("Browser");
+
+            CheckApplicationData(configuration);
+            Program = configuration["Program"];
+            Port = int.Parse(configuration["Port"]);
+            SaveID = bool.Parse(configuration["SaveIdProcess"]);
 
             if (State != Status.Off)
             {
@@ -82,6 +96,11 @@ namespace Wallpaper
                 ProcessClosed();
             })
             );
+
+            if(SaveID)
+            {
+                File.WriteAllText(ProcessIdFile, _process.Id.ToString());
+            }
 
             State = Status.Run;
         }
@@ -131,7 +150,7 @@ namespace Wallpaper
         }
 
         /// <summary>
-        /// Проверяет данные.
+        /// Проверяет данные конфигурации.
         /// </summary>
         /// <param name="configuration">Конфигурация приложения.</param>
         private void CheckApplicationData(IConfiguration configuration)
@@ -144,6 +163,11 @@ namespace Wallpaper
             if (configuration["Port"] == null)
             {
                 throw new ArgumentNullException("Port", "Значения не задано.");
+            }
+
+            if (configuration["SaveIdProcess"] == null)
+            {
+                throw new ArgumentNullException("SaveIdProcess", "Значения не задано.");
             }
 
             var port = int.Parse(configuration["Port"]);

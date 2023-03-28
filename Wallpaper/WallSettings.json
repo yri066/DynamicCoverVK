@@ -3,6 +3,7 @@
 		"Arguments": "--headless --disable-gpu",
 		"StartBrowser": true,
 		"Program": "",
+		"SaveIdProcess": false,
 		"Port": 9222,
 		"Delay": 10000
 	},

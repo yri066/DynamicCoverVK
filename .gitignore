@@ -346,3 +346,9 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/.vs/Wallpaper/DesignTimeBuild/.dtbcache.v2
+/.vs/Wallpaper/v17/.suo
+/.vs/Wallpaper/DesignTimeBuild/.dtbcache.v2
+/.vs/Wallpaper/DesignTimeBuild/.dtbcache.v2
+/.vs/Wallpaper/v17/.suo
+/README.md

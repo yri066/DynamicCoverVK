@@ -15,7 +15,7 @@ namespace Wallpaper
 
         static void initSettings()
         {
-            if(!File.Exists("CoverSettings.json"))
+            if (!File.Exists("CoverSettings.json"))
             {
                 throw new FileNotFoundException("Отсутствует файл настроек: CoverSettings.json");
             }
@@ -29,34 +29,12 @@ namespace Wallpaper
             try
             {
                 initSettings();
+                StartBrowser();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 return;
-            }
-
-            App = new Application(AppConfiguration);
-            var start = bool.Parse(AppConfiguration["Browser:StartBrowser"]);
-
-            if (start)
-            {
-                try
-                {
-                    App.Start();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-
-                Task.Delay(2000).Wait();
-
-                if(App.State == Application.Status.Off)
-                {
-                    Console.WriteLine("Не удалось запустить браузер.");
-                    return;
-                }
             }
 
             Console.WriteLine("Started.");
@@ -68,6 +46,29 @@ namespace Wallpaper
             Console.ReadLine();
 
             _timer.Dispose();
+        }
+
+        /// <summary>
+        /// Запуск браузера.
+        /// </summary>
+        private static void StartBrowser()
+        {
+            App = new Application(AppConfiguration);
+            var start = bool.Parse(AppConfiguration["Browser:StartBrowser"]);
+
+            if (!start)
+            {
+                return;
+            }
+
+            App.Start();
+
+            Task.Delay(2000).Wait();
+
+            if (App.State == Application.Status.Off)
+            {
+                throw new Exception("Не удалось запустить браузер.");
+            }
         }
 
         /// <summary>

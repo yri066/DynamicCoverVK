@@ -157,34 +157,34 @@ namespace Wallpaper
         {
             if (string.IsNullOrEmpty(configuration["Program"]))
             {
-                throw new ArgumentNullException("Program", "Программа для запуска не задана");
+                throw new ArgumentNullException("Program", "Не указана программа для запуска.");
             }
 
             if (configuration["Port"] == null)
             {
-                throw new ArgumentNullException("Port", "Значения не задано.");
+                throw new ArgumentNullException("Port", "Значение порта не задано.");
             }
 
             if (configuration["SaveIdProcess"] == null)
             {
-                throw new ArgumentNullException("SaveIdProcess", "Значения не задано.");
+                throw new ArgumentNullException("SaveIdProcess", "Значение не задано.");
             }
 
             var port = int.Parse(configuration["Port"]);
             if (port < 0 || port > 65535)
             {
-                throw new ArgumentOutOfRangeException("Port", "Значения порта задано вне допустимого диапазона 0 - 65535");
+                throw new ArgumentOutOfRangeException("Port", "Значение порта задано вне допустимого диапазона 0 - 65535");
             }
 
             if (configuration["Delay"] == null)
             {
-                throw new ArgumentNullException("Delay", "Значения не задано.");
+                throw new ArgumentNullException("Delay", "Значение ожидания загрузки страницы не задано.");
             }
 
             var delay = int.Parse(configuration["Delay"]);
             if (delay < 0 || delay > 125000)
             {
-                throw new ArgumentOutOfRangeException("Delay", "Значения ожидания загрузки страницы задано вне допустимого диапазона 0 - 125000");
+                throw new ArgumentOutOfRangeException("Delay", "Значение ожидания загрузки страницы задано вне допустимого диапазона 0 - 125000");
             }
         }
     }

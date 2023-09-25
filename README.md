@@ -1,6 +1,6 @@
 # Динамическая обложка для сообществ и профилей ВКонтакте
 
-[![codebeat badge](https://codebeat.co/badges/83571851-5ec2-40ed-82b2-9e30c4bd2c71)](https://codebeat.co/projects/github-com-yri066-dynamiccovervk-main)
+[![codebeat badge](https://codebeat.co/badges/0a2bbb3c-9618-44f0-ae73-9b67bd0f3eb9)](https://codebeat.co/projects/github-com-yri066-dynamiccovervk-main)
 
 
 Dynamic Cover VK позволяет создать из Web-страницы изображение и установить в качестве обложки с переодичностью в 1 минуту.

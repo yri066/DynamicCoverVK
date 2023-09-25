@@ -47,7 +47,7 @@ namespace Wallpaper
         /// <summary>
         /// Аргументы запуска.
         /// </summary>
-        public string Arguments { get { return $"--remote-debugging-port={Port} {_configuration["Browser:Arguments"]}"; } }
+        public string Arguments { get { return $"--remote-debugging-port={Port} --remote-allow-origins=http://localhost:{Port} {_configuration["Browser:Arguments"]}"; } }
 
         /// <summary>
         /// Процесс, управляющий приложением.

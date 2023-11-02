@@ -52,12 +52,12 @@ namespace Wallpaper
         /// <summary>
         /// Устанавливает обложку на страницу.
         /// </summary>
-        public async void SetImage()
+        public void SetImage()
         {
             if (string.IsNullOrEmpty(VK_ID) || string.IsNullOrEmpty(VK_ACCESS_TOKEN) || string.IsNullOrEmpty(PageUrl))
                 return;
 
-            var output = await GetImage(PageUrl, Width, Height, Delay);
+            var output = GetImage(PageUrl, Width, Height, Delay).Result;
             var bytes = Convert.FromBase64String(output);
 
             var SendUrlJson = GetToUrl(VkUrl);

@@ -36,20 +36,22 @@ Dynamic Cover VK позволяет создать из Web-страницы и�
 
 ```json
 {
-	"Browser": {
-		"Arguments": "--headless=new",
-		"StartBrowser": true, 
-		"Program": "chromium-browser",
-		"SaveIdProcess": true,
-		"Port": 9222,
-		"Delay": 10000
-	},
-	"Width": 1920,
-	"Height": 768,
-	"Type": "client",
-	"VK_ID": "82169748",
-	"VK_ACCESS_TOKEN": "vk1.a.ef033c224f574ba43ef033c224f574ba43",
-	"WEB_PAGE_URL": "https://example.com"
+    "Settings": {
+        "Browser": {
+            "Arguments": "--headless=new",
+            "StartBrowser": true,
+            "Program": "chromium-browser",
+            "SaveIdProcess": true,
+            "Port": 9222,
+            "Delay": 10000
+        },
+        "Width": 1920,
+        "Height": 768,
+        "Type": "client",
+        "VK_ID": "82169748",
+        "VK_ACCESS_TOKEN": "vk1.a.ef033c224f574ba43ef033c224f574ba43",
+        "WEB_PAGE_URL": "https://example.com"
+    }
 }
 ```
 </details>
@@ -59,20 +61,22 @@ Dynamic Cover VK позволяет создать из Web-страницы и�
 
 ```json
 {
-	"Browser": {
-		"Arguments": "--headless=new --disable-gpu",
-		"StartBrowser": true, 
-		"Program": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
-		"SaveIdProcess": false,
-		"Port": 9222,
-		"Delay": 10000
-	},
-	"Width": 1920,
-	"Height": 768,
-	"Type": "group",
-	"VK_ID": "152760895",
-	"VK_ACCESS_TOKEN": "ad55sjtba43ef033c4ds3fds2fg51c80",
-	"WEB_PAGE_URL": "https://example.com"
+    "Settings": {
+        "Browser": {
+            "Arguments": "--headless=new --disable-gpu",
+            "StartBrowser": true,
+            "Program": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+            "SaveIdProcess": false,
+            "Port": 9222,
+            "Delay": 10000
+        },
+        "Width": 1920,
+        "Height": 768,
+        "Type": "group",
+        "VK_ID": "152760895",
+        "VK_ACCESS_TOKEN": "ad55sjtba43ef033c4ds3fds2fg51c80",
+        "WEB_PAGE_URL": "https://example.com"
+    }
 }
 ```
 </details>

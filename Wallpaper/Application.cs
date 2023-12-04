@@ -2,13 +2,14 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using Wallpaper.Model;
 
 namespace Wallpaper
 {
     /// <summary>
-	/// Работа с приложением.
-	/// </summary>
-	public class Application
+    /// Работа с приложением.
+    /// </summary>
+    public class Application
     {
         /// <summary>
         /// Состояния работы приложения.
@@ -20,24 +21,29 @@ namespace Wallpaper
         }
 
         /// <summary>
-        /// Конфигурация приложения.
+        /// Конфигурация браузера.
         /// </summary>
-        private IConfiguration _configuration { get; set; }
+        private Browser _browserOptions { get; set; }
 
         /// <summary>
         /// Программа для запуска.
         /// </summary>
-        public string Program { get; private set; }
+        public string Program { get { return _browserOptions.Program; } }
 
         /// <summary>
         /// Порт для подключения.
         /// </summary>
-        public int Port { get; private set; } = 9222;
+        public int Port { get { return _browserOptions.Port; } }
 
         /// <summary>
         /// Сохранять идентификатор процесса в файл.
         /// </summary>
-        public bool SaveID { get; private set; } = false;
+        public bool SaveID { get { return _browserOptions.SaveIdProcess; } }
+
+        /// <summary>
+        /// Задержка перед сознанием снимка.
+        /// </summary>
+        public int Delay { get { return _browserOptions.Delay; } }
 
         /// <summary>
         /// Название файла для сохранения идентификатора процесса.
@@ -47,7 +53,7 @@ namespace Wallpaper
         /// <summary>
         /// Аргументы запуска.
         /// </summary>
-        public string Arguments { get { return $"--remote-debugging-port={Port} --remote-allow-origins=http://localhost:{Port} {_configuration["Browser:Arguments"]}"; } }
+        public string Arguments { get { return $"--remote-debugging-port={Port} --remote-allow-origins=http://localhost:{Port} {_browserOptions.Arguments}"; } }
 
         /// <summary>
         /// Процесс, управляющий приложением.
@@ -71,7 +77,8 @@ namespace Wallpaper
 
         public Application(IConfiguration configuration)
         {
-            _configuration = configuration;
+            _browserOptions = configuration.GetSection(Browser.Selector).Get<Browser>();
+            CheckBrowserData(_browserOptions);
         }
 
         /// <summary>
@@ -79,13 +86,6 @@ namespace Wallpaper
         /// </summary>
         public void Start()
         {
-            var configuration = _configuration.GetSection("Browser");
-
-            CheckApplicationData(configuration);
-            Program = configuration["Program"];
-            Port = int.Parse(configuration["Port"]);
-            SaveID = bool.Parse(configuration["SaveIdProcess"]);
-
             if (State != Status.Off)
             {
                 return;
@@ -150,39 +150,21 @@ namespace Wallpaper
         }
 
         /// <summary>
-        /// Проверяет данные конфигурации.
+        /// Проверяет данные конфигурации браузера.
         /// </summary>
-        /// <param name="configuration">Конфигурация приложения.</param>
-        private void CheckApplicationData(IConfiguration configuration)
+        private void CheckBrowserData(Browser browser)
         {
-            if (string.IsNullOrEmpty(configuration["Program"]))
+            if (string.IsNullOrEmpty(browser.Program) && browser.StartBrowser)
             {
                 throw new ArgumentNullException("Program", "Не указана программа для запуска.");
             }
 
-            if (configuration["Port"] == null)
+            if (browser.Port < 1024 || browser.Port > 65535)
             {
-                throw new ArgumentNullException("Port", "Значение порта не задано.");
+                throw new ArgumentOutOfRangeException("Port", "Значение порта задано вне допустимого диапазона 1024 - 65535");
             }
 
-            if (configuration["SaveIdProcess"] == null)
-            {
-                throw new ArgumentNullException("SaveIdProcess", "Значение не задано.");
-            }
-
-            var port = int.Parse(configuration["Port"]);
-            if (port < 0 || port > 65535)
-            {
-                throw new ArgumentOutOfRangeException("Port", "Значение порта задано вне допустимого диапазона 0 - 65535");
-            }
-
-            if (configuration["Delay"] == null)
-            {
-                throw new ArgumentNullException("Delay", "Значение ожидания загрузки страницы не задано.");
-            }
-
-            var delay = int.Parse(configuration["Delay"]);
-            if (delay < 0 || delay > 125000)
+            if (browser.Delay < 0 || browser.Delay > 125000)
             {
                 throw new ArgumentOutOfRangeException("Delay", "Значение ожидания загрузки страницы задано вне допустимого диапазона 0 - 125000");
             }

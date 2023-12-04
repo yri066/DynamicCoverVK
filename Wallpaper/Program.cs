@@ -54,7 +54,7 @@ namespace Wallpaper
         private static void StartBrowser()
         {
             App = new Application(AppConfiguration);
-            var start = bool.Parse(AppConfiguration["Browser:StartBrowser"]);
+            var start = bool.Parse(AppConfiguration["Settings:Browser:StartBrowser"]);
 
             if (!start)
             {

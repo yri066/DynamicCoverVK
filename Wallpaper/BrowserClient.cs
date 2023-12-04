@@ -44,7 +44,7 @@ namespace Wallpaper
         /// <param name="width">Ширина веб-страницы.</param>
         /// <param name="height">Высота веб-страницы.</param>
         /// <returns>Идентификатор вкладки.</returns>
-        public async Task<string> CreateTab(string url, string width = "960", string height = "384")
+        public async Task<string> CreateTab(string url, int width = 960, int height = 384)
         {
             var query = @$"{{""id"": 1, ""method"": ""Target.createTarget"", ""params"": {{""url"": ""{url}"", ""width"": {width}, ""height"": {height}}} }}";
             await Send(_webSocket, query);

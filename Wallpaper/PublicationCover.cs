@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System;
-using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
@@ -14,14 +13,15 @@ namespace Wallpaper
     /// </summary>
     internal class PublicationCover
     {
-        private IConfiguration _configuration { get; set; }
-        private string VK_ID { get; }
-        private string VK_ACCESS_TOKEN { get; }
+        private CoverSettings _coverOptions { get; set; }
+        private string Type { get {  return _coverOptions.Type; } }
+        private string VK_ID { get { return _coverOptions.VK_ID; } }
+        private string VK_ACCESS_TOKEN { get { return _coverOptions.VK_ACCESS_TOKEN; } }
         private string VkUrl { get; }
-        private string PageUrl { get; }
-        private string Width { get; }
-        private string Height { get; }
-        private int Delay { get; }
+        private string WebPageUrl { get { return _coverOptions.WEB_PAGE_URL; } }
+        private int Width { get { return _coverOptions.Width; } }
+        private int Height { get { return _coverOptions.Height; } }
+        private int Delay { get { return _coverOptions.Browser.Delay; } }
 
         /// <summary>
         /// Инициализирует новый экземпляр класса PublicationCover.
@@ -29,17 +29,10 @@ namespace Wallpaper
         /// <param name="AppConfiguration"></param>
         public PublicationCover(IConfiguration AppConfiguration)
         {
-            this._configuration = AppConfiguration;
-            VK_ID = _configuration["VK_ID"];
-            VK_ACCESS_TOKEN = _configuration["VK_ACCESS_TOKEN"];
-            PageUrl = _configuration["WEB_PAGE_URL"];
+            _coverOptions = AppConfiguration.GetSection(CoverSettings.Selector).Get<CoverSettings>();
+            CheckCoverData(_coverOptions);
 
-            Width = _configuration["Width"];
-            Height = _configuration["Height"];
-            Delay = int.Parse(_configuration["Browser:Delay"]);
-
-
-            if (_configuration["type"] == "group")
+            if (Type == "group")
             {
                 VkUrl = $"https://api.vk.com/method/photos.getOwnerCoverPhotoUploadServer?group_id={VK_ID}&crop_x=0&crop_y=0&crop_x2={Width}&crop_y2={Height}&access_token={VK_ACCESS_TOKEN}&v=5.131";
             }
@@ -54,10 +47,7 @@ namespace Wallpaper
         /// </summary>
         public void SetImage()
         {
-            if (string.IsNullOrEmpty(VK_ID) || string.IsNullOrEmpty(VK_ACCESS_TOKEN) || string.IsNullOrEmpty(PageUrl))
-                return;
-
-            var output = GetImage(PageUrl, Width, Height, Delay).Result;
+            var output = GetImage(WebPageUrl, Width, Height, Delay).Result;
             var bytes = Convert.FromBase64String(output);
 
             var SendUrlJson = GetToUrl(VkUrl);
@@ -81,9 +71,9 @@ namespace Wallpaper
         /// <param name="height">Высота веб-страницы.</param>
         /// <param name="delay">Задержка перед созданием скриншота.</param>
         /// <returns>Изображение веб-страницы в формате base64.</returns>
-        private async Task<string> GetImage(string url, string width, string height, int delay)
+        private async Task<string> GetImage(string url, int width, int height, int delay)
         {
-            var port = int.Parse(_configuration["Browser:Port"]);
+            var port = _coverOptions.Browser.Port;
 
             using (var client = new BrowserClient())
             {
@@ -121,6 +111,42 @@ namespace Wallpaper
         {
             using var client = new HttpClient();
             return client.GetStringAsync(url).Result;
+        }
+
+        /// <summary>
+        /// Проверяет данные конфигурации.
+        /// </summary>
+        private void CheckCoverData(CoverSettings settings)
+        {
+            if (string.IsNullOrEmpty(settings.Type))
+            {
+                throw new ArgumentNullException("Type", "Не указан идентификатор.");
+            }
+
+            if (string.IsNullOrEmpty(settings.VK_ID))
+            {
+                throw new ArgumentNullException("VK_ID", "Не указан идентификатор.");
+            }
+
+            if (string.IsNullOrEmpty(settings.VK_ACCESS_TOKEN))
+            {
+                throw new ArgumentNullException("VK_ACCESS_TOKEN", "Не указан токен.");
+            }
+
+            if (string.IsNullOrEmpty(settings.WEB_PAGE_URL))
+            {
+                throw new ArgumentNullException("WEB_PAGE_URL", "Не указан адрес страницы.");
+            }
+
+            if (settings.Width < 1 || settings.Width > 65535)
+            {
+                throw new ArgumentOutOfRangeException("Width", "Значение задано вне допустимого диапазона 1 - 65535");
+            }
+
+            if (settings.Height < 1 || settings.Height > 65535)
+            {
+                throw new ArgumentOutOfRangeException("Height", "Значение задано вне допустимого диапазона 1 - 65535");
+            }
         }
     }
 }
